@@ -1,5 +1,12 @@
 # booki-starter-pack
 
+## Couleurs
+
+* firstColor `#0065FC`;
+* secondColor: `#DEEBFF`;
+* thirdColor: `#D9D9D9`;
+* fourthColor: `#F2F2F2`;
+
 ## Spécifications fonctionnelles
 
 ### Fonction recherche
@@ -100,27 +107,31 @@
 
 * code de l'[icon loupe](https://fontawesome.com/icons/magnifying-glass?f=classic&s=solid)
 
-* HTML de la 1ère section du `<main>`
+* des icones stylisés en CSS direectement ds le HTML, non conforme à la direction de la maquette, mais tel que fontawsome gère les changements de couleurs de ces icônes
 
 ```html
-  <div>
-    <section>
-        <form>
-            <i class="fa-solid fa-location-dot" style="color: #050505;"></i>
-            <input type="text" placeholder="Marseille, France" />
-            <button type="submit">Rechercher</button>
-        </form>
-    </section>
-    <section>
-        <p>Filtres</p>
-        <button>Économique</button>
-        <button>Familial</button>
-        <button>Romantique</button>
-        <button>Nos pépites</button>
-    </section>
-    <section>
-        <i></i>
-        <p>Plus de 500 logements sont disponibles dans cette ville</p>
-    </section>
-  </div>
+<!-- 1ère <section> du <main>-->
+<section>
+    <form>
+        <i class="fa-solid fa-location-dot" style="color: #050505;"></i>
+        <input type="text" placeholder="Marseille, France" />
+        <button type="submit">Rechercher</button>
+    </form>
+</section>
+<!-- 3ème <section> du <main> -->
+<i class="fas fa-info fa-stack-1x" style="color: #0065FC;"></i>
 ```
+
+## Todo
+
+* voir à quoi correspond l'attribut `aria-hidden` dans les icônes, ds la base de code, on retrouve cet attribut avec une valeur `true` tel que `aria-hidden="true"`.
+
+* ordre de balises `HTML`
+
+```html
+<!-- balise <a> et <h3> ds le bonne ordre? 
+  je suppose que oui ...(le lien semble fonctionnel)-->
+<a href="#"><h3></h3></a>
+```
+
+* concernant la description des images, faut-il faire 1 description + détaillée & + précise? par exemple, `alt='Image de la chambre d'hôtel montrant un lit'` pour une image où on voit 2 lit?
