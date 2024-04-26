@@ -126,6 +126,14 @@
 
 * voir à quoi correspond l'attribut `aria-hidden` dans les icônes, ds la base de code, on retrouve cet attribut avec une valeur `true` tel que `aria-hidden="true"`.
 
+* placer des ancres sur les 2 liens de la section menu, rappel:
+
+```html
+<!-- la valeur de l'attribut "href" doit débuter par le caractère "#" suivi de la valeur de l'id inclus ds la balise ciblée par l'ancrage -->
+<a href='#ancre'>Lien du menu de navigation</a>
+<div id='ancre'>Cible à atteindre au click sur le lien du menu de navigation</div>
+```
+
 * ordre de balises `HTML`
 
 ```html

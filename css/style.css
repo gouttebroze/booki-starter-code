@@ -62,7 +62,31 @@ a {
     color: var(--main-bg-color)
 }
 
-/****** Hebergements And Populaires ***********/
+/****** header ******/
+header img {
+  width: 61px;
+  height: 19px;
+}
+
+.header-menu {
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+}
+
+.header-menu img {
+  margin-right: auto; /* propriété "margin-right" (ou left) ayant valeur "auto" sur flexbox permet de fixer 1 element, ici à gauche, pr le séparer des autres elements fixer sur l'axe horizontal avec "justify-content", car il n'existe pas de propriétés similaires sur l'axe horizontal à celle de l'axe verticale tel que "align-self" permettant de séparer et manipuler un élément unique au groupe... */
+}
+
+.header-menu nav a {
+  padding: 0 20px 0 50px;
+}
+
+.header-title {
+  padding: 40px 0 40px 0;
+}
+
+/****** Hebergements And Populaires ******/
 .hebergements-and-populaires {
     display: flex;
     justify-content: space-between;
@@ -78,6 +102,22 @@ a {
 /****** Hebergements ***********/
 .hebergements {
     width: 65%;
+
+}
+
+.hebergements-title {}
+
+.hebergements-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+}
+
+.hebergements-cards img {
+    width: 100%;
+    height: 136px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
 }
 
 /****** Populaires ***********/
