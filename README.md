@@ -143,3 +143,9 @@
 ```
 
 * concernant la description des images, faut-il faire 1 description + détaillée & + précise? par exemple, `alt='Image de la chambre d'hôtel montrant un lit'` pour une image où on voit 2 lit?
+
+* ajuster les balises de textes h1, H2, h2, p ... pour être au plus proche de celle la maquette avec <font-size> <font-weight> ...
+
+* propriété "webkit"? ....
+
+* trouver les bonnes valeurs des propriétés "margin" qui séparent les différentes sections

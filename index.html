@@ -12,6 +12,7 @@
         integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./css/style.css">
+    <!-- <link rel="stylesheet" href="./css/normalize.css"> -->
 </head>
 
 <body>
@@ -31,26 +32,30 @@
         </header>
         <main>
             <div>
-                <section>
+                <section class="recherche">
                     <form>
-                        <i class="fa-solid fa-location-dot"></i><!-- voir notes du README pr changement de couleurs des icônes -->
-                        <input type="text" placeholder="Marseille, France" />
+                        <i class="fa-solid fa-location-dot fa-lg"></i>
+                        <input type="text" value="Marseille, France" /> <!-- il faut changer l'attribut "placeholder" pr "value" pr 1 couleur de texte "noire" -->
                         <button type="submit">Rechercher</button>
                     </form>
                 </section>
-                <section>
+                <section class="filtre">
                     <p>Filtres</p>
-                    <button>Économique</button>
-                    <button>Familial</button>
-                    <button>Romantique</button>
-                    <button>Nos pépites</button>
+                    <button><i class="fa-solid fa-money-bill-wave"></i>Économique</button>
+                    <button><i class="fa-solid fa-person"></i>Familial</button>
+                    <button><i class="fa-solid fa-heart"></i>Romantique</button>
+                    <button><i class="fa-solid fa-fire"></i>Nos pépites</button>
                 </section>
-                <section>
+                <section class="info">
                     <!--Pour l'ICONE "INFO": poser une <div> autour, avec une classe CSS, 
                         puis utiliser la propriété CSS "border-radius" pour créer un cercle 
                         autour de l'icône ci-dessous (plutôt que d'utiliser un icône 'cerle' 
                         tel que <i class="far fa-circle fa-stack-2x"></i>)  -->
-                    <i class="fas fa-info fa-stack-1x"></i><!-- voir notes du README pr changement de couleurs des icônes -->
+                    <div>
+                        <!-- voir notes du README pr changement de couleurs des icônes -->
+                       <i class="fa-solid fa-info"></i> 
+                    </div>
+                    
                     <p>Plus de 500 logements sont disponibles dans cette ville</p>
                 </section>
             </div>
@@ -264,36 +269,39 @@
                     <div>
                         <h2>Activités à Marseille</h2>
                         <!-- voir après fin style CSS pr choisir <article> ou <figure> -->
-                        <a href="#">
-                            <article>
-                                <img src="./images/activites/reno-laithienne.jpg" alt="Image montrant le Vieux Port" />
-                                <h3>Vieux Port</h3>
-                            </article>
-                        </a>
-                        <a href="#">
-                            <article>
-                                <img src="./images/activites/paul-hermann.jpg" alt="Image montrant le Fort de Pomègues" />
-                                <h3>Fort de Pomègues</h3>
-                            </article>
-                        </a>
-                        <a href="#">
-                            <article>
-                                <img src="./images/activites/kilyan-sockalingum.jpg" alt="Image montrant un paysage du Parc National des Calanques " />
-                                <h3>Parc National des Calanques</h3>
-                            </article>
-                        </a>
-                        <a href="#">
-                            <figure>
-                                <img src="./images/activites/florian-wehde.jpg" alt="Image montrant Notre-Dame-de-la-Garde" />
-                                <figcaption><h3>Notre-Dame-de-la-Garde</h3></figcaption>
-                            </figure>
-                        </a>
+                        <div class="activites-cards">
+                            <a href="#">
+                                <article class="card">
+                                    <img src="./images/activites/reno-laithienne.jpg" alt="Image montrant le Vieux Port" />
+                                    <p>Vieux Port</p>
+                                </article>
+                            </a>
+                            <a href="#">
+                                <article class="card">
+                                    <img src="./images/activites/paul-hermann.jpg" alt="Image montrant le Fort de Pomègues" />
+                                    <p>Fort de Pomègues</p>
+                                </article>
+                            </a>
+                            <a href="#">
+                                <article class="card">
+                                    <img src="./images/activites/kilyan-sockalingum.jpg" alt="Image montrant un paysage du Parc National des Calanques " />
+                                    <p>Parc National des Calanques</p>
+                                </article>
+                            </a>
+                            <a href="#">
+                                <article class="card">
+                                    <img src="./images/activites/florian-wehde.jpg" alt="Image montrant Notre-Dame-de-la-Garde" />
+                                    <p>Notre-Dame-de-la-Garde</p>
+                                </article>
+                            </a>
+                        </div>
+                        
                     </div>
                 </section>
             </div>
         </main>
         <footer>
-            <div>
+            <div class="a-propos">
                 <h3>À propos</h3>
                 <ul>
                     <a href="#">
