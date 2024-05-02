@@ -197,9 +197,13 @@ header img {
 }
 
 /****** Hebergements ***********/
-.hebergements {
-    width: 65%;
-
+.hebergements { 
+/* attention à la spécificité 
+(id supérieur à la classe? ou non ? VOIR DOC. MDN "la spécificité" pr + de détails) 
+ok, fonctionne avec ce selecteur de classe mais tt 
+est cassé si je le change pour un selecteur d'id ("#hebergements") */ 
+    width: 65%; 
+    padding-top: 5px;
 }
 
 .hebergements-title {}
@@ -298,7 +302,8 @@ header img {
 footer {
   margin-top: 35px;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
+  gap: 25px;
   background-color: var(--main-bg-color);
 }
 
@@ -309,11 +314,11 @@ footer div {
 }
 
 footer div h3 {
-  padding-left: 20px;
+  padding-left: 38px;
 }
 
 footer div ul {
-  padding-left: 10%;
+  /* padding-left: 10%; */
 }
 
 
