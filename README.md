@@ -1,5 +1,9 @@
 # booki-starter-pack
 
+## Repo Code Source
+
+* [URL du Repo. du projet (code source)](https://github.com/gouttebroze/booki-starter-code/tree/master)
+
 ## Couleurs
 
 * firstColor `#0065FC`;
@@ -60,7 +64,7 @@
 
 ### Bibliothèque d’icônes
 
-* Les icônes proviennent de la bibliothèque **Font Awesome**.
+* Les icônes proviennent de la bibliothèque **Font Awesome** voir la [documentation](https://docs.fontawesome.com/)
 
 ### Couleurs
 
