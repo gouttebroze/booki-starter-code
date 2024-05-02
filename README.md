@@ -149,3 +149,21 @@
 * propriété "webkit"? ....
 
 * trouver les bonnes valeurs des propriétés "margin" qui séparent les différentes sections
+
+## Sections à finir
+
+* **header**: rapprocher ``<nav>`` du haut de page
+
+* **section recherche**: voir différences avec maquette
+
+* **section hebergements**: aligner titre + haut des cards avec titre et haut de la section **populaire**
+
+* **section activités**: voir différences avec maquette
+
+* **footer**: derniere colonne...
+
+## QUESTIONS
+
+* **section recherche**: pr les *bouttons icone*:
+  * mettre une balise ``<p>`` ds la balise ``<button>`` ?
+  * pr différencier partie **texte** de partie **icone** des bouttons...

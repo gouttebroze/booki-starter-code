@@ -1,10 +1,8 @@
 /****** General ***********/
 * {
     font-family: 'Raleway', sans-serif;
-    /* largeur minimum fixée à 320 px */
-    /* min-width: 320px; */
-    /* largeur maximum à 1440 px */
-    /* max-width: 1440px; */
+    /* largeur minimum fixée à 320 px *//* largeur maximum à 1440 px */
+    /* min-width: 320px; *//* max-width: 1440px; */
 }
 
 :root {
@@ -67,31 +65,46 @@ ul li {
 }
 
 /****** header ******/
-header img {
-  width: 61px;
-  height: 19px;
-}
-
-.header-menu {
+.header-top {
   display: flex;
-  /* width: 100%; 
-  justify-content: flex-end;*/
+  align-items: center;
 }
 
-.header-menu img {
-  margin-right: auto; /* propriété "margin-right" (ou left) ayant valeur "auto" sur flexbox permet de fixer 1 element, ici à gauche, pr le séparer des autres elements fixer sur l'axe horizontal avec "justify-content", car il n'existe pas de propriétés similaires sur l'axe horizontal à celle de l'axe verticale tel que "align-self" permettant de séparer et manipuler un élément unique au groupe... */
+.header-top img {
+  width: 61px;
+  margin-right: auto; 
+  /* propriété "margin-right" (ou left) ayant valeur "auto" sur flexbox 
+  permet de fixer 1 element, ici à gauche, 
+  pr le séparer des autres elements 
+  (il n'existe pas de propriétés similaires sur 
+  l'axe horizontal à celle de l'axe verticale tel 
+  que "align-self" permettant de séparer et manipuler un élément 
+  unique au groupe... */
 }
 
-.header-menu nav a {
-  padding: 0 20px 0 50px;
+.header-nav {}
+
+.header-nav ul {
+  display: flex;
+  margin: 0;
+  
 }
 
-/* hover ? active ? visited ? */
-.header-menu nav a:hover {
-  border-top: 1.5px var(--main-color) solid;
+.header-nav ul li {
+  padding-top: 1rem;
+  margin-left: 4.8rem; 
 }
 
-.header-title {
+/*.header-nav a {
+   padding: 0 20px 0 50px;
+} */
+
+.header-nav a:hover {
+  color: var(--main-color);
+  border-top: 2px var(--main-color) solid;
+}
+
+.header-bottom {
   padding: 40px 0 40px 0;
 }
 
@@ -118,7 +131,7 @@ header img {
 .recherche form input {
   border: 1px solid var(--main-bg-color);
   text-align: center;
-  font-size: 1.2rem;
+  font-size: 18px;
   font-weight: 700;
   display: inline-block;
   width: 180px;
@@ -168,13 +181,13 @@ header img {
   gap: 20px;
 }
 
-.info div {
+.info div { /* ou .info i pr selectionner l'icone */
   /* margin: 15px; 
   padding: 5px 20px;*/
   width: 24px;
   height: 24px;
   border-radius: 50%;
-  border: 1px solid black;
+  border: 1px solid var(--filter-bg-color);
   text-align: center;
   margin-top: 10px;
 }
@@ -320,13 +333,6 @@ footer div h3 {
 footer div ul {
   /* padding-left: 10%; */
 }
-
-
-.a-propos {
-
-}
-
-
 
 
 /* Le code ci-dessous correspond à la version responsive uniquement */
