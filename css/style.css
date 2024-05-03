@@ -36,6 +36,10 @@ ul li {
   list-style: none;
 }
 
+button {
+  cursor: pointer;
+}
+
 .section-title {
     margin: 0;
     font-size: 22px;
@@ -67,41 +71,37 @@ ul li {
 /****** header ******/
 .header-top {
   display: flex;
-  align-items: center;
 }
 
 .header-top img {
   width: 61px;
   margin-right: auto; 
+  padding: 30px 0;
   /* propriété "margin-right" (ou left) ayant valeur "auto" sur flexbox 
-  permet de fixer 1 element, ici à gauche, 
-  pr le séparer des autres elements 
-  (il n'existe pas de propriétés similaires sur 
-  l'axe horizontal à celle de l'axe verticale tel 
+  permet de fixer 1 element, ici à gauche, pr le séparer des autres elements 
+  (il n'existe pas de propriétés similaires sur l'axe horizontal à celle de l'axe verticale tel 
   que "align-self" permettant de séparer et manipuler un élément 
   unique au groupe... */
 }
 
-.header-nav {}
+/* SUPPRIMER CODE COMMENTE SI INUTILE */
+/* .header-nav {} */
 
 .header-nav ul {
   display: flex;
-  margin: 0;
-  
+  margin: 0; 
 }
 
 .header-nav ul li {
-  padding-top: 1rem;
-  margin-left: 4.8rem; 
+  margin-left: 4rem; margin-top: 1rem;
 }
 
-/*.header-nav a {
-   padding: 0 20px 0 50px;
-} */
+.header-nav a {}
 
 .header-nav a:hover { /* pseudo-class hover */
   color: var(--main-color);
   border-top: 2px var(--main-color) solid;
+  padding-top: 1rem;
 }
 
 .header-bottom {
@@ -143,6 +143,7 @@ ul li {
 }
 
 /****** filtre ******/
+/* revoir disposition btn des icones + texte*/
 .filtre {
   display: flex;
   margin-top: 20px;
@@ -155,7 +156,6 @@ ul li {
 .filtre button {
   border-radius: 25px;
   margin-left: 15px;
-  padding: 4px 19px;
   background-color: white;
   font-size: 17px;
   font-weight: bold;
@@ -164,6 +164,15 @@ ul li {
 
 .filtre button:hover {
   background-color: var(--filter-bg-color);
+}
+
+.filtre button i {
+  padding-left: 19px;
+  padding-right: 14px;
+}
+
+.filtre button span {
+  padding-right: 19px;
 }
 
 /****** info ******/
@@ -214,15 +223,19 @@ parent, ici ".hebergements-and-populaires" */
 
 .hebergements { 
     width: 65%; 
-    padding-top: 5px;
+    
 }
 
-/* .hebergements-title {} */ /* TODO SI SELECTEUR UTILE */
+/* .hebergements-title {}   */
 
 .hebergements-cards {
     display: grid; 
     grid-template-columns: repeat(3, 1fr); /* valeur égale à ": 1fr 1fr 1fr"; */
     gap: 10px;
+}
+
+.hebergements-cards .card {
+  margin-top: 33px;
 }
 
 .hebergements-cards img {
@@ -284,7 +297,6 @@ parent, ici ".hebergements-and-populaires" */
 }
 
 #activites div p {
-  font-size: 16px;
   font-weight: 700;
   padding-left: 10px;
 }
@@ -314,18 +326,19 @@ footer {
   margin-top: 35px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 25px;
+  column-gap: 25px;
   background-color: var(--main-bg-color);
 }
 
 footer div {
   display: flex;
   flex-direction: column;
-  align-items: start;
 }
 
 footer div h3 {
+  font-size: 18px;
   padding-left: 38px;
+  
 }
 
 footer div ul {
