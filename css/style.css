@@ -99,24 +99,20 @@ ul li {
    padding: 0 20px 0 50px;
 } */
 
-.header-nav a:hover {
+.header-nav a:hover { /* pseudo-class hover */
   color: var(--main-color);
   border-top: 2px var(--main-color) solid;
 }
 
 .header-bottom {
-  padding: 40px 0 40px 0;
+  padding: 40px 0;
 }
 
 /***** Partie Recherche ******/
-.recherche {
-  margin: 2Opx; 
-  
-}
+.recherche {} /* TODO */
 
 .recherche form {
   display: flex;
-  
 }
 
 .fa-location-dot {
@@ -125,7 +121,6 @@ ul li {
   color: black; 
   padding: 28px 21px 28px 24px;
   background-color: var(--main-bg-color);
-  border: none;
 }
 
 .recherche form input {
@@ -133,7 +128,6 @@ ul li {
   text-align: center;
   font-size: 18px;
   font-weight: 700;
-  display: inline-block;
   width: 180px;
 }
 
@@ -143,7 +137,7 @@ ul li {
   border-bottom-right-radius: 15px;
   background-color: var(--main-color);
   padding: 15px;
-  color: var(--main-bg-color);
+  color: #ffffff;
   font-size: 18px;
   font-weight: 700;
 }
@@ -192,9 +186,7 @@ ul li {
   margin-top: 10px;
 }
 
-.info p {
-  
-}
+/* .info p {} */ /* TODO si utile */ 
 
 /****** Hebergements And Populaires ******/
 .hebergements-and-populaires {
@@ -210,20 +202,26 @@ ul li {
 }
 
 /****** Hebergements ***********/
+
+/* .hebergements-and-populaires  .hebergements {
+
+} */
+/* différence ds le niveau de spécificité? 
+y-a-t-il un intérêt à enchaîner 2 sélecteurs? 
+(pour viser tel élément?) si le sélecteur de 
+classe "hebergement" est précédé d'un sélecteur 
+parent, ici ".hebergements-and-populaires" */
+
 .hebergements { 
-/* attention à la spécificité 
-(id supérieur à la classe? ou non ? VOIR DOC. MDN "la spécificité" pr + de détails) 
-ok, fonctionne avec ce selecteur de classe mais tt 
-est cassé si je le change pour un selecteur d'id ("#hebergements") */ 
     width: 65%; 
     padding-top: 5px;
 }
 
-.hebergements-title {}
+/* .hebergements-title {} */ /* TODO SI SELECTEUR UTILE */
 
 .hebergements-cards {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    display: grid; 
+    grid-template-columns: repeat(3, 1fr); /* valeur égale à ": 1fr 1fr 1fr"; */
     gap: 10px;
 }
 
@@ -314,8 +312,8 @@ est cassé si je le change pour un selecteur d'id ("#hebergements") */
 /****** footer ******/
 footer {
   margin-top: 35px;
-  display: flex;
-  justify-content: flex-start;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   gap: 25px;
   background-color: var(--main-bg-color);
 }
