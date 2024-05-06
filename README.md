@@ -210,3 +210,15 @@
 * **section recherche**: pr les *bouttons icone*:
   * mettre une balise ``<p>`` ds la balise ``<button>`` ?
   * pr différencier partie **texte** de partie **icone** des bouttons...
+
+## NOTES SPECIFICITE
+
+* sélécteur universel (*) : 0
+* element : 1
+* classe, attributs, pseudo-classe: 10
+* id: 100
+* : 1000
+* !important (suis valeur de propriété): 10 000
+
+* VISUALISATION
+  * id - classe - element

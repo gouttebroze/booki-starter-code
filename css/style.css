@@ -1,8 +1,6 @@
 /****** General ***********/
 * {
     font-family: 'Raleway', sans-serif;
-    /* largeur minimum fixée à 320 px *//* largeur maximum à 1440 px */
-    /* min-width: 320px; *//* max-width: 1440px; */
 }
 
 :root {
@@ -84,9 +82,6 @@ button {
   unique au groupe... */
 }
 
-/* SUPPRIMER CODE COMMENTE SI INUTILE */
-/* .header-nav {} */
-
 .header-nav ul {
   display: flex;
   margin: 0; 
@@ -95,8 +90,6 @@ button {
 .header-nav ul li {
   margin-left: 4rem; margin-top: 1rem;
 }
-
-.header-nav a {}
 
 .header-nav a:hover { /* pseudo-class hover */
   color: var(--main-color);
@@ -109,8 +102,6 @@ button {
 }
 
 /***** Partie Recherche ******/
-.recherche {} /* TODO */
-
 .recherche form {
   display: flex;
 }
@@ -121,6 +112,7 @@ button {
   color: black; 
   padding: 28px 21px 28px 24px;
   background-color: var(--main-bg-color);
+  cursor: pointer;
 }
 
 .recherche form input {
@@ -211,22 +203,9 @@ button {
 }
 
 /****** Hebergements ***********/
-
-/* .hebergements-and-populaires  .hebergements {
-
-} */
-/* différence ds le niveau de spécificité? 
-y-a-t-il un intérêt à enchaîner 2 sélecteurs? 
-(pour viser tel élément?) si le sélecteur de 
-classe "hebergement" est précédé d'un sélecteur 
-parent, ici ".hebergements-and-populaires" */
-
 .hebergements { 
     width: 65%; 
-    
 }
-
-/* .hebergements-title {}   */
 
 .hebergements-cards {
     display: grid; 
@@ -240,9 +219,17 @@ parent, ici ".hebergements-and-populaires" */
 
 .hebergements-cards img {
     width: 100%;
-    height: 136px;
+    height: 124px;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
+}
+
+.hebergements-cards .card-content {
+   padding: 4px 15px 8px 15px; 
+}
+
+.hebergements-cards .card-rating {
+  margin-bottom: 5px;
 }
 
 /****** Populaires ***********/
@@ -333,17 +320,31 @@ footer {
 footer div {
   display: flex;
   flex-direction: column;
+  padding-left: 20px;
 }
 
 footer div h3 {
-  font-size: 18px;
-  padding-left: 38px;
-  
+  font-size: 18px; 
+  margin-top: 0; /* remove the default margin property on top & bottom on the title <h3> */
+  margin-bottom: 0;
+  padding-top: 20px; /* give the padding value we want on top on the title */
 }
 
 footer div ul {
-  /* padding-left: 10%; */
+  /* remove the default list (<ul>) padding on the left */ 
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
 }
+
+footer div ul li {
+  padding-top: 20px;
+}
+
+footer div ul li:last-of-type {
+  /* add a padding bottom property only to the last <li> */
+  padding-bottom: 20px;
+} 
 
 
 /* Le code ci-dessous correspond à la version responsive uniquement */
