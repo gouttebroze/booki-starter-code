@@ -1,10 +1,6 @@
 /****** General ***********/
 * {
     font-family: 'Raleway', sans-serif;
-    /* largeur minimum fixée à 320 px */
-    /* min-width: 320px; */
-    /* largeur maximum à 1440 px */
-    /* max-width: 1440px; */
 }
 
 :root {
@@ -38,6 +34,10 @@ ul li {
   list-style: none;
 }
 
+button {
+  cursor: pointer;
+}
+
 .section-title {
     margin: 0;
     font-size: 22px;
@@ -67,43 +67,43 @@ ul li {
 }
 
 /****** header ******/
-header img {
-  width: 61px;
-  height: 19px;
-}
-
-.header-menu {
+.header-top {
   display: flex;
-  /* width: 100%; 
-  justify-content: flex-end;*/
 }
 
-.header-menu img {
-  margin-right: auto; /* propriété "margin-right" (ou left) ayant valeur "auto" sur flexbox permet de fixer 1 element, ici à gauche, pr le séparer des autres elements fixer sur l'axe horizontal avec "justify-content", car il n'existe pas de propriétés similaires sur l'axe horizontal à celle de l'axe verticale tel que "align-self" permettant de séparer et manipuler un élément unique au groupe... */
+.header-top img {
+  width: 61px;
+  margin-right: auto; 
+  padding: 30px 0;
+  /* propriété "margin-right" (ou left) ayant valeur "auto" sur flexbox 
+  permet de fixer 1 element, ici à gauche, pr le séparer des autres elements 
+  (il n'existe pas de propriétés similaires sur l'axe horizontal à celle de l'axe verticale tel 
+  que "align-self" permettant de séparer et manipuler un élément 
+  unique au groupe... */
 }
 
-.header-menu nav a {
-  padding: 0 20px 0 50px;
+.header-nav ul {
+  display: flex;
+  margin: 0; 
 }
 
-/* hover ? active ? visited ? */
-.header-menu nav a:hover {
-  border-top: 1.5px var(--main-color) solid;
+.header-nav ul li {
+  margin-left: 4rem; margin-top: 1rem;
 }
 
-.header-title {
-  padding: 40px 0 40px 0;
+.header-nav a:hover { /* pseudo-class hover */
+  color: var(--main-color);
+  border-top: 2px var(--main-color) solid;
+  padding-top: 1rem;
+}
+
+.header-bottom {
+  padding: 40px 0;
 }
 
 /***** Partie Recherche ******/
-.recherche {
-  margin: 2Opx; 
-  
-}
-
 .recherche form {
   display: flex;
-  
 }
 
 .fa-location-dot {
@@ -112,15 +112,14 @@ header img {
   color: black; 
   padding: 28px 21px 28px 24px;
   background-color: var(--main-bg-color);
-  border: none;
+  cursor: pointer;
 }
 
 .recherche form input {
   border: 1px solid var(--main-bg-color);
   text-align: center;
-  font-size: 1.2rem;
+  font-size: 18px;
   font-weight: 700;
-  display: inline-block;
   width: 180px;
 }
 
@@ -130,12 +129,13 @@ header img {
   border-bottom-right-radius: 15px;
   background-color: var(--main-color);
   padding: 15px;
-  color: var(--main-bg-color);
+  color: #ffffff;
   font-size: 18px;
   font-weight: 700;
 }
 
 /****** filtre ******/
+/* revoir disposition btn des icones + texte*/
 .filtre {
   display: flex;
   margin-top: 20px;
@@ -148,7 +148,6 @@ header img {
 .filtre button {
   border-radius: 25px;
   margin-left: 15px;
-  padding: 4px 19px;
   background-color: white;
   font-size: 17px;
   font-weight: bold;
@@ -157,6 +156,15 @@ header img {
 
 .filtre button:hover {
   background-color: var(--filter-bg-color);
+}
+
+.filtre button i {
+  padding-left: 19px;
+  padding-right: 14px;
+}
+
+.filtre button span {
+  padding-right: 19px;
 }
 
 /****** info ******/
@@ -168,20 +176,18 @@ header img {
   gap: 20px;
 }
 
-.info div {
+.info div { /* ou .info i pr selectionner l'icone */
   /* margin: 15px; 
   padding: 5px 20px;*/
   width: 24px;
   height: 24px;
   border-radius: 50%;
-  border: 1px solid black;
+  border: 1px solid var(--filter-bg-color);
   text-align: center;
   margin-top: 10px;
 }
 
-.info p {
-  
-}
+/* .info p {} */ /* TODO si utile */ 
 
 /****** Hebergements And Populaires ******/
 .hebergements-and-populaires {
@@ -198,27 +204,32 @@ header img {
 
 /****** Hebergements ***********/
 .hebergements { 
-/* attention à la spécificité 
-(id supérieur à la classe? ou non ? VOIR DOC. MDN "la spécificité" pr + de détails) 
-ok, fonctionne avec ce selecteur de classe mais tt 
-est cassé si je le change pour un selecteur d'id ("#hebergements") */ 
     width: 65%; 
-    padding-top: 5px;
 }
 
-.hebergements-title {}
-
 .hebergements-cards {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    display: grid; 
+    grid-template-columns: repeat(3, 1fr); /* valeur égale à ": 1fr 1fr 1fr"; */
     gap: 10px;
+}
+
+.hebergements-cards .card {
+  margin-top: 33px;
 }
 
 .hebergements-cards img {
     width: 100%;
-    height: 136px;
+    height: 124px;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
+}
+
+.hebergements-cards .card-content {
+   padding: 4px 15px 8px 15px; 
+}
+
+.hebergements-cards .card-rating {
+  margin-bottom: 5px;
 }
 
 /****** Populaires ***********/
@@ -273,7 +284,6 @@ est cassé si je le change pour un selecteur d'id ("#hebergements") */
 }
 
 #activites div p {
-  font-size: 16px;
   font-weight: 700;
   padding-left: 10px;
 }
@@ -301,32 +311,40 @@ est cassé si je le change pour un selecteur d'id ("#hebergements") */
 /****** footer ******/
 footer {
   margin-top: 35px;
-  display: flex;
-  justify-content: flex-start;
-  gap: 25px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 25px;
   background-color: var(--main-bg-color);
 }
 
 footer div {
   display: flex;
   flex-direction: column;
-  align-items: start;
+  padding-left: 20px;
 }
 
 footer div h3 {
-  padding-left: 38px;
+  font-size: 18px; 
+  margin-top: 0; /* remove the default margin property on top & bottom on the title <h3> */
+  margin-bottom: 0;
+  padding-top: 20px; /* give the padding value we want on top on the title */
 }
 
 footer div ul {
-  /* padding-left: 10%; */
+  /* remove the default list (<ul>) padding on the left */ 
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
-
-.a-propos {
-
+footer div ul li {
+  padding-top: 20px;
 }
 
-
+footer div ul li:last-of-type {
+  /* add a padding bottom property only to the last <li> */
+  padding-bottom: 20px;
+} 
 
 
 /* Le code ci-dessous correspond à la version responsive uniquement */

@@ -153,3 +153,76 @@
 * propriété "webkit"? ....
 
 * trouver les bonnes valeurs des propriétés "margin" qui séparent les différentes sections
+
+* utiliser des unités pr tailles relatives
+
+  * donner taille a un element par rapport a la taille de la fenetre (relatif par rapport à la fenetre et non au parent):
+    * 100`vh` (viewport height) : 100% de la hauteur de l'espace visible
+    * 100`vw` (viewport width) : 100% de la largeur de l'espace visible
+  * `vmin`
+  * `vmax`
+
+  * unités de mesures liés à la police
+    * `em` par rapport à la taille de la police de l'élément ou du parent,  (exemple:
+
+      ```css
+        html, body {
+          
+        }
+        
+        button {
+          color: white;
+          background-color: blue;
+          text-decoration: none;
+          font-size: 30px;
+          padding: 0.4em 0.5em; 
+          /* soit la moitié de la taille de la police, sur les côtés */
+        }
+      ```
+
+    )
+
+    * `rem` lié à la police définie ds la racine (`body` ou `html`),
+    à utiliser pr fixer 1 valeur relative à la taille de la police générale (exemple:
+
+      ```css
+        html, body {
+          font-size: 20px;
+        }
+        
+        .card {
+          padding: 1rem; /* 1 rem est alors égal à 20px */
+        }
+      ```
+
+    )
+
+## Sections à finir
+
+* **header**: rapprocher ``<nav>`` du haut de page
+
+* **section recherche**: voir différences avec maquette
+
+* **section hebergements**: aligner titre + haut des cards avec titre et haut de la section **populaire**
+
+* **section activités**: voir différences avec maquette
+
+* **footer**: derniere colonne...
+
+## QUESTIONS
+
+* **section recherche**: pr les *bouttons icone*:
+  * mettre une balise ``<p>`` ds la balise ``<button>`` ?
+  * pr différencier partie **texte** de partie **icone** des bouttons...
+
+## NOTES SPECIFICITE
+
+* sélécteur universel (*) : 0
+* element : 1
+* classe, attributs, pseudo-classe: 10
+* id: 100
+* : 1000
+* !important (suis valeur de propriété): 10 000
+
+* VISUALISATION
+  * id - classe - element
