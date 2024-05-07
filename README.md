@@ -217,12 +217,25 @@
 
 ## NOTES SPECIFICITE
 
-* sélécteur universel (*) : 0
-* element : 1
-* classe, attributs, pseudo-classe: 10
-* id: 100
-* : 1000
-* !important (suis valeur de propriété): 10 000
+* nombre de points:
+
+  * **Sélecteur universel** (``*``) obtient **0** point de spécificité.
+
+  * **Sélecteur d'element** ou de **pseudo-element** obtient **1** point de spécificité.
+
+  * **Sélecteur** de ``classe``,  de ``pseudo-classe`` ou d'``attributs``obtient **10** points de spécificité.
+
+  * **100** : **Sélecteur** d'``id``obtient **100** points de spécificité.
+  
+  * **Attribut de style intégré**:
+
+    * Le code ``CSS`` appliqué directement à l'attribut ``style`` de l'élément ``HTML`` obtient un score de spécificité de **1 000** points de spécificité.
+
+  * **Ajout de la règle ``!important``**:
+
+    * Un ``!important`` à la fin d'une valeur ``CSS`` obtient un score de spécificité de **10 000** points. Il s'agit du niveau de spécificité le plus élevé qu'un élément individuel peut obtenir.
+
+  * La **pseudo-classe** ``:not()`` n'ajoute rien au calcul de spécificité. Toutefois, les sélecteurs transmis en tant qu'arguments sont ajoutés au calcul de la spécificité.
 
 * VISUALISATION
   * id - classe - element
