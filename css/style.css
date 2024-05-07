@@ -88,7 +88,8 @@ button {
 }
 
 .header-nav ul li {
-  margin-left: 4rem; margin-top: 1rem;
+  margin-left: 4rem;
+  margin-top: 1rem;
 }
 
 .header-nav a:hover { /* pseudo-class hover */
@@ -393,5 +394,43 @@ footer div ul li:last-of-type {
 
 /* Small devices (phones, less than 768px) */
 @media (max-width: 767.98px) {
-    /* ... */
+  /********** header (mobile) *************/ 
+  .main-container {
+    padding: 0; /* remove padding from desktop default value */
+  }
+
+  .header-top {
+    flex-direction: column; /* change navigation section position to the next line, on bottom */
+  }
+
+  .header-top img {
+    padding: 40px 40vw; /* center image on verticale axe */
+  }
+
+  .header-nav ul {
+    padding-left: 0; /* remove default list property */
+    /* justify-content: space-around; */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    text-align: center;
+  }
+
+  .header-nav ul li {
+    /*margin: 19px 0 17px 0;  add spaces on the top & bottom navigation menu */
+    margin: 0;
+  }
+
+  .header-nav ul li a {
+    /* make links as wide as their list item parents (<li>) */
+    display: block;  
+    padding-bottom: 1rem;
+  }
+
+  .header-nav ul li a:hover {
+    color: var(--main-color);
+    border-top: none;
+    border-bottom: 2px var(--main-color) solid;
+    padding-top: 0;
+  }
+  
 }
