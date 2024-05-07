@@ -104,6 +104,7 @@ button {
 /***** Partie Recherche ******/
 .recherche form {
   display: flex;
+  margin-bottom: 35px; /* margin between this "recherche" section & "filtre" section */
 }
 
 .fa-location-dot {
@@ -138,7 +139,8 @@ button {
 /* revoir disposition btn des icones + texte*/
 .filtre {
   display: flex;
-  margin-top: 20px;
+  /* margin-top: 20px; */
+  margin-bottom: 35px;
 }
 
 .filtre p {
@@ -151,7 +153,7 @@ button {
   background-color: white;
   font-size: 17px;
   font-weight: bold;
-  border: 1px solid #D9D9D9 ;
+  border: 1px solid #D9D9D9;
   padding: 0;
 }
 
@@ -170,25 +172,29 @@ button {
 
 /****** info ******/
 .info {
-  margin-top: 20px;
-  margin-bottom: 30px;
+  margin-bottom: 35px; /* margin between this one & next section (hebergement & populaires) */
   display: flex;
-  justify-content: flex-start;
-  gap: 20px;
+  align-items: center; /* to align icon & text */
+  gap: 10px; /* space between <i> & <p> elements */
 }
 
-.info div { /* ou .info i pr selectionner l'icone */
-  /* margin: 15px; 
-  padding: 5px 20px;*/
-  width: 24px;
-  height: 24px;
+.info span {
+  padding: 5px 5px;
+  width: 10px;
+  height: 10px;
   border-radius: 50%;
-  border: 1px solid var(--filter-bg-color);
+  border: 1px solid #D9D9D9;
   text-align: center;
-  margin-top: 10px;
 }
 
-/* .info p {} */ /* TODO si utile */ 
+.info span i {
+  vertical-align: 0.525em; /* to center icon into cercle */
+}
+
+.info p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
 
 /****** Hebergements And Populaires ******/
 .hebergements-and-populaires {
