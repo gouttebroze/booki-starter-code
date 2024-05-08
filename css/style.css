@@ -23,6 +23,8 @@ body {
     max-width: 1440px;
     padding: 0 50px;
     box-sizing: border-box;
+    
+    min-width: 320px;
 }
 
 a {
@@ -204,7 +206,7 @@ button {
 }
 
 .hebergements-and-populaires section {
-    background-color: var(--main-bg-color);
+    
     border-radius: 20px;
     padding: 30px;
     box-sizing: border-box;
@@ -395,8 +397,11 @@ footer div ul li:last-of-type {
 /* Small devices (phones, less than 768px) */
 @media (max-width: 767.98px) {
   /********** header (mobile) *************/ 
+  body {
+    /* margin: 0; */
+  }
   .main-container {
-    padding: 0; /* remove padding from desktop default value */
+    padding: 0; /* remove padding from desktop default value */   
   }
 
   .header-top {
@@ -424,7 +429,7 @@ footer div ul li:last-of-type {
     /* make links as wide as their list item parents (<li>) */
     display: inline-block; 
     padding-bottom: 1rem;
-    width: 50vw;
+    width: 46vw;
     border: 2px transparent solid;
   }
 
@@ -449,10 +454,18 @@ footer div ul li:last-of-type {
     /* justify-content: center; */
   }
 
-  .recherche form button {
+  .recherche form .btn-text {
     display: none;
   }
 
+  .recherche form .btn-glass-icon {
+    background-color: #0065FC;
+  }
+
+  .recherche form .btn-glass-icon i {
+    color: rgb(255, 255, 255);
+  }
+    
 /*.filtre {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -479,6 +492,71 @@ footer div ul li:last-of-type {
   .filtre button {
     padding: 3% 0;
     flex-basis: 40%;
+  }
+
+  /* 
+   * la maquette indique que les 2 prochaines sections sont inversés en mobile, 
+   * la section "populaires" apparait en 1ere, avant la section "hébergements" 
+   */
+
+  /****  mobile -- section-hebergements&populaires   ****/
+  .hebergements-and-populaires {
+    flex-direction: column-reverse;
+    /* 
+     * la valeur "column-reverse* de la propriété "flex-direction" ns permet 
+     * d'inverser l'ordre de positionnement des éléments enfants, soit nos 2 colonnes, 
+     * la section "populaires" qui était positionné en seconde apparaît désormais en première 
+    */
+  }
+
+  .hebergements-and-populaires section {
+      /*  */
+  }
+
+ /**********************************
+  || mobile_section-hebergements |||
+  **********************************/
+  #hebergements {
+    background-color: white;
+  }
+
+  .hebergements-cards {
+    display: flex; 
+    flex-direction: column;
+
+  }
+
+  .hebergements-cards .card {
+  }
+
+  .hebergements-cards img {
+/*     */
+  }
+
+ /*******  mobile_section-populaires  *********/
+  .populaires {
+    background-color: var(--main-bg-color);
+  }
+
+  .populaires-cards {
+      flex-direction: column;
+  }
+
+ /******* mobile-activités *******/
+  .activites-cards {
+    /* affichage en colonne à la place d'un en grille en mode desktop */
+    display: flex; 
+    flex-direction: column;
+    gap: 30px;
+  }
+
+
+ /*************************
+  ||||| mobile-footer |||||
+  *************************/
+  footer {
+    display: flex;
+    flex-direction: column;
   }
   
 }
