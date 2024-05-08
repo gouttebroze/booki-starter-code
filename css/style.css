@@ -99,7 +99,7 @@ button {
 }
 
 .header-bottom {
-  padding: 40px 0;
+  padding: 40px 0; 
 }
 
 /***** Partie Recherche ******/
@@ -122,7 +122,7 @@ button {
   text-align: center;
   font-size: 18px;
   font-weight: 700;
-  width: 180px;
+  width: 195px;
 }
 
 .recherche form button {
@@ -422,8 +422,10 @@ footer div ul li:last-of-type {
 
   .header-nav ul li a {
     /* make links as wide as their list item parents (<li>) */
-    display: block;  
+    display: inline-block; 
     padding-bottom: 1rem;
+    width: 50vw;
+    border: 2px transparent solid;
   }
 
   .header-nav ul li a:hover {
@@ -431,6 +433,52 @@ footer div ul li:last-of-type {
     border-top: none;
     border-bottom: 2px var(--main-color) solid;
     padding-top: 0;
+  }
+
+  .header-bottom {
+    margin: 0 6% 35px 6%; /* 18.48 */
+  }
+
+  .header-bottom p {
+    padding-top: 8px;
+    margin: 0;
+  }
+
+  /*********** search-form-group recherche - filtre - info ************/
+  .recherche form {
+    /* justify-content: center; */
+  }
+
+  .recherche form button {
+    display: none;
+  }
+
+/*.filtre {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+  }
+  .filtre p {
+    grid-row: 1 / 2;
+    grid-column: 1 / 5;   
+  }
+  .filtre button {
+    grid-row: 2 / 4;
+    grid-column: ;  
+  } */
+
+  .filtre {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 5px;
+    padding: 0 6% 0 6%;
+  }
+  .filtre p {
+    flex-basis: 100%;
+  }
+  .filtre button {
+    padding: 3% 0;
+    flex-basis: 40%;
   }
   
 }
