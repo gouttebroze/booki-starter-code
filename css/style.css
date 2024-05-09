@@ -1,35 +1,35 @@
 /****** General ***********/
 * {
-    font-family: 'Raleway', sans-serif;
+  font-family: 'Raleway', sans-serif;
 }
 
 :root {
-    --main-color: #0065FC;
-    --main-bg-color: #F2F2F2;
-    --filter-bg-color: #DEEBFF;
+  --main-color: #0065FC;
+  --main-bg-color: #F2F2F2;
+  --filter-bg-color: #DEEBFF;
 }
 
 .fa-solid {
-    color: var(--main-color);
+  color: var(--main-color);
 }
 
 body {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 .main-container {
-    width: 100%;
-    max-width: 1440px;
-    padding: 0 50px;
-    box-sizing: border-box;
-    
-    min-width: 320px;
+  width: 100%;
+  max-width: 1440px;
+  padding: 0 50px;
+  box-sizing: border-box;
+
+  min-width: 320px;
 }
 
 a {
-    color: inherit;
-    text-decoration: none;
+  color: inherit;
+  text-decoration: none;
 }
 
 ul li {
@@ -41,41 +41,42 @@ button {
 }
 
 .section-title {
-    margin: 0;
-    font-size: 22px;
+  margin: 0;
+  font-size: 22px;
 }
 
 .card {
-    background-color: white;
-    border-radius: 20px;
-    padding: 5px;
-    filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
+  background-color: white;
+  border-radius: 20px;
+  padding: 5px;
+  filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
 }
 
 .card img {
-    object-fit: cover;
+  object-fit: cover;
 }
 
 .card-title {
-    font-size: 16px;
+  font-size: 16px;
 }
 
 .euro {
-    font-weight: 700;
+  font-weight: 700;
 }
 
 .neutral-star {
-    color: var(--main-bg-color)
+  color: var(--main-bg-color)
 }
 
 /****** header ******/
 .header-top {
   display: flex;
+  padding-bottom: 30px;
 }
 
 .header-top img {
   width: 61px;
-  margin-right: auto; 
+  margin-right: auto;
   padding: 30px 0;
   /* propriété "margin-right" (ou left) ayant valeur "auto" sur flexbox 
   permet de fixer 1 element, ici à gauche, pr le séparer des autres elements 
@@ -86,7 +87,7 @@ button {
 
 .header-nav ul {
   display: flex;
-  margin: 0; 
+  margin: 0;
 }
 
 .header-nav ul li {
@@ -94,26 +95,28 @@ button {
   margin-top: 1rem;
 }
 
-.header-nav a:hover { /* pseudo-class hover */
+.header-nav a:hover {
+  /* pseudo-class hover */
   color: var(--main-color);
   border-top: 2px var(--main-color) solid;
   padding-top: 1rem;
 }
 
 .header-bottom {
-  padding: 40px 0; 
+  padding: 0;
 }
 
 /***** Partie Recherche ******/
 .recherche form {
   display: flex;
-  margin-bottom: 35px; /* margin between this "recherche" section & "filtre" section */
+  margin: 35px 0 35px 0;
+  /* margin between this "recherche" section & "filtre" section */
 }
 
 .fa-location-dot {
   border-top-left-radius: 15px;
   border-bottom-left-radius: 15px;
-  color: black; 
+  color: black;
   padding: 28px 21px 28px 24px;
   background-color: var(--main-bg-color);
   cursor: pointer;
@@ -138,11 +141,14 @@ button {
   font-weight: 700;
 }
 
+.recherche form .btn-glass-icon {
+  display: none;
+}
+
 /****** filtre ******/
 /* revoir disposition btn des icones + texte*/
 .filtre {
   display: flex;
-  /* margin-top: 20px; */
   margin-bottom: 35px;
 }
 
@@ -175,10 +181,13 @@ button {
 
 /****** info ******/
 .info {
-  margin-bottom: 35px; /* margin between this one & next section (hebergement & populaires) */
+  margin-bottom: 35px;
+  /* margin between this one & next section (hebergement & populaires) */
   display: flex;
-  align-items: center; /* to align icon & text */
-  gap: 10px; /* space between <i> & <p> elements */
+  align-items: center;
+  /* to align icon & text */
+  gap: 10px;
+  /* space between <i> & <p> elements */
 }
 
 .info span {
@@ -191,7 +200,8 @@ button {
 }
 
 .info span i {
-  vertical-align: 0.525em; /* to center icon into cercle */
+  vertical-align: 0.525em;
+  /* to center icon into cercle */
 }
 
 .info p {
@@ -201,26 +211,27 @@ button {
 
 /****** Hebergements And Populaires ******/
 .hebergements-and-populaires {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 
 .hebergements-and-populaires section {
-    
-    border-radius: 20px;
-    padding: 30px;
-    box-sizing: border-box;
+
+  border-radius: 20px;
+  padding: 30px;
+  box-sizing: border-box;
 }
 
 /****** Hebergements ***********/
-.hebergements { 
-    width: 65%; 
+.hebergements {
+  width: 65%;
 }
 
 .hebergements-cards {
-    display: grid; 
-    grid-template-columns: repeat(3, 1fr); /* valeur égale à ": 1fr 1fr 1fr"; */
-    gap: 10px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  /* valeur égale à ": 1fr 1fr 1fr"; */
+  gap: 10px;
 }
 
 .hebergements-cards .card {
@@ -228,14 +239,14 @@ button {
 }
 
 .hebergements-cards img {
-    width: 100%;
-    height: 124px;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
+  width: 100%;
+  height: 124px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
 }
 
 .hebergements-cards .card-content {
-   padding: 4px 15px 8px 15px; 
+  padding: 4px 15px 8px 15px;
 }
 
 .hebergements-cards .card-rating {
@@ -244,47 +255,47 @@ button {
 
 /****** Populaires ***********/
 .populaires {
-    width: 32%;
+  width: 32%;
 }
 
 .populaires-title {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .populaires-cards .card {
-    display: flex;
-    margin-top: 33px;
+  display: flex;
+  margin-top: 33px;
 }
 
 .populaires-cards img {
-    width: 33%;
-    height: 136px;
-    border-top-left-radius: 20px;
-    border-bottom-left-radius: 20px;
+  width: 33%;
+  height: 136px;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
 }
 
 .populaires-cards .card-content {
-    width: 67%;
-    padding-left: 15px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    box-sizing: border-box;
+  width: 67%;
+  padding-left: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-sizing: border-box;
 }
 
 .populaires-cards .card-title {
-    margin-top: 10px;
-    margin-bottom: 4px;
+  margin-top: 10px;
+  margin-bottom: 4px;
 }
 
 .populaires-cards .card-subtitle {
-    margin: 0;
+  margin: 0;
 }
 
 .populaires-cards .card-rating {
-    margin-bottom: 5px;
+  margin-bottom: 5px;
 }
 
 /******* activités ******/
@@ -299,8 +310,9 @@ button {
 }
 
 .activites-cards {
-  display: grid; 
-  grid-template-columns: repeat(4, 1fr); /* reparti les 4 cards avec une largeur égale */
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  /* reparti les 4 cards avec une largeur égale */
   gap: 30px;
 }
 
@@ -308,7 +320,8 @@ button {
   display: flex;
   flex-direction: column;
   height: 439px;
-  padding: 0%; /* redefinition de la valeur de la propriété "padding" définie sur la classe "card" */
+  padding: 0%;
+  /* redefinition de la valeur de la propriété "padding" définie sur la classe "card" */
 }
 
 .activites-cards img {
@@ -334,14 +347,16 @@ footer div {
 }
 
 footer div h3 {
-  font-size: 18px; 
-  margin-top: 0; /* remove the default margin property on top & bottom on the title <h3> */
+  font-size: 18px;
+  margin-top: 0;
+  /* remove the default margin property on top & bottom on the title <h3> */
   margin-bottom: 0;
-  padding-top: 20px; /* give the padding value we want on top on the title */
+  padding-top: 20px;
+  /* give the padding value we want on top on the title */
 }
 
 footer div ul {
-  /* remove the default list (<ul>) padding on the left */ 
+  /* remove the default list (<ul>) padding on the left */
   padding-left: 0;
   margin-top: 0;
   margin-bottom: 0;
@@ -354,7 +369,7 @@ footer div ul li {
 footer div ul li:last-of-type {
   /* add a padding bottom property only to the last <li> */
   padding-bottom: 20px;
-} 
+}
 
 
 /* Le code ci-dessous correspond à la version responsive uniquement */
@@ -362,72 +377,88 @@ footer div ul li:last-of-type {
 /****** Media queries ***********/
 /* Medium devices (tablets, less/equal than 1024px) */
 @media (max-width: 1024px) {
-    .hebergements-and-populaires {
-        flex-direction: column;
-    }
+  .hebergements-and-populaires {
+    flex-direction: column;
+  }
 
-    .hebergements {
-        width: 100%;
-    }
+  .hebergements {
+    width: 100%;
+  }
 
-    .populaires {
-        width: 100%;
-        margin-top: 50px;
-    }
+  .populaires {
+    width: 100%;
+    margin-top: 50px;
+  }
 
-    .populaires-cards {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-    }
+  .populaires-cards {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
 
-    .populaires-cards a {
-        width: 30%;
-    }
+  .populaires-cards a {
+    width: 30%;
+  }
 
-    .populaires-cards .card-title {
-        font-size: 14px;
-    }
+  .populaires-cards .card-title {
+    font-size: 14px;
+  }
 
-    .populaires-cards .card-subtitle {
-        font-size: 13px;
-    }
+  .populaires-cards .card-subtitle {
+    font-size: 13px;
+  }
 }
 
 /* Small devices (phones, less than 768px) */
 @media (max-width: 767.98px) {
-  /********** header (mobile) *************/ 
+
+  /********** header (mobile) *************/
   body {
-    /* margin: 0; */
+    margin: 0;
   }
+
   .main-container {
-    padding: 0; /* remove padding from desktop default value */   
+    padding: 0;
+    /* remove padding from desktop default value */
   }
 
   .header-top {
-    flex-direction: column; /* change navigation section position to the next line, on bottom */
+    flex-direction: column;
+    /* change navigation section position to the next line, on bottom */
   }
 
+  /* 
+     * centrer image / logo:
+     *
+     * d'abord, avec la propriété "padding"  on donne une marge intérieur au logo
+     * on utilise les "rem" (unité à valeurs relatives) pr rester centrer,  
+     * quelque soit la largeur du device (de 767 à 320px) 
+     * enfin, on pt combler l'espace restant avec la valeur 
+     * "auto" sur des marges extérieurs, 
+     * 
+     */
   .header-top img {
-    padding: 40px 40vw; /* center image on verticale axe */
+    padding: 30px 2rem;
+    /* "2rem" soit 2 * la taille police de l' élément racine ("html")*/
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .header-nav ul {
-    padding-left: 0; /* remove default list property */
-    /* justify-content: space-around; */
+    padding-left: 0;
+    /* remove default padding property */
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     text-align: center;
   }
 
   .header-nav ul li {
-    /*margin: 19px 0 17px 0;  add spaces on the top & bottom navigation menu */
     margin: 0;
   }
 
   .header-nav ul li a {
     /* make links as wide as their list item parents (<li>) */
-    display: inline-block; 
+    display: inline-block;
     padding-bottom: 1rem;
     width: 46vw;
     border: 2px transparent solid;
@@ -441,7 +472,8 @@ footer div ul li:last-of-type {
   }
 
   .header-bottom {
-    margin: 0 6% 35px 6%; /* 18.48 */
+    margin: 0 6% 35px 6%;
+    /* 18.48 */
   }
 
   .header-bottom p {
@@ -451,22 +483,31 @@ footer div ul li:last-of-type {
 
   /*********** search-form-group recherche - filtre - info ************/
   .recherche form {
-    /* justify-content: center; */
+    /* justify-content: center; 
+    margin-left: 5%;*/
+    margin-left: 20px;
+    margin-right: 20px;
   }
 
   .recherche form .btn-text {
     display: none;
+
   }
 
   .recherche form .btn-glass-icon {
     background-color: #0065FC;
+    display: block;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    padding: 17px;
+    filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.25));
   }
 
   .recherche form .btn-glass-icon i {
     color: rgb(255, 255, 255);
   }
-    
-/*.filtre {
+
+  /*.filtre {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(3, 1fr);
@@ -486,14 +527,26 @@ footer div ul li:last-of-type {
     gap: 10px 5px;
     padding: 0 6% 0 6%;
   }
+
   .filtre p {
     flex-basis: 100%;
   }
+
   .filtre button {
-    padding: 3% 0;
+    padding: 3% 6%;
     flex-basis: 40%;
+    margin-left: 0;
   }
 
+  /* .filtre button {
+  border-radius: 25px;
+  
+  background-color: white;
+  font-size: 17px;
+  font-weight: bold;
+  border: 1px solid #D9D9D9;
+  padding: 0;
+} */
   /* 
    * la maquette indique que les 2 prochaines sections sont inversés en mobile, 
    * la section "populaires" apparait en 1ere, avant la section "hébergements" 
@@ -510,10 +563,10 @@ footer div ul li:last-of-type {
   }
 
   .hebergements-and-populaires section {
-      /*  */
+    /*  */
   }
 
- /**********************************
+  /**********************************
   || mobile_section-hebergements |||
   **********************************/
   #hebergements {
@@ -521,42 +574,72 @@ footer div ul li:last-of-type {
   }
 
   .hebergements-cards {
-    display: flex; 
+    display: flex;
     flex-direction: column;
 
   }
 
-  .hebergements-cards .card {
-  }
+  .hebergements-cards .card {}
 
   .hebergements-cards img {
-/*     */
+    /*     */
   }
 
- /*******  mobile_section-populaires  *********/
+  /*******  mobile_section-populaires  *********/
   .populaires {
     background-color: var(--main-bg-color);
   }
 
   .populaires-cards {
-      flex-direction: column;
+    flex-direction: column;
+
   }
 
- /******* mobile-activités *******/
+  .populaires-cards img {
+    /*     width: 66%;
+    height: 136px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px; */
+  }
+
+  .populaires-cards .card {}
+
+  /******* mobile-activités *******/
   .activites-cards {
     /* affichage en colonne à la place d'un en grille en mode desktop */
-    display: flex; 
+    display: flex;
     flex-direction: column;
-    gap: 30px;
   }
 
+  #activites {
+    /* margin-top: 50px;
+    padding: 15px; */
+  }
 
- /*************************
+  #activites div p {
+    /* font-weight: 700;
+    padding-left: 10px; */
+  }
+
+  .activites-cards .card {
+    height: 200px;
+    /* display: flex;
+    flex-direction: column;
+    
+    padding: 0%; */
+  }
+
+  .activites-cards img {
+    width: 100%;
+    height: 141px;
+  }
+
+  /*************************
   ||||| mobile-footer |||||
   *************************/
   footer {
     display: flex;
     flex-direction: column;
   }
-  
+
 }
