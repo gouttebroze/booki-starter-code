@@ -23,7 +23,6 @@ body {
   max-width: 1440px;
   padding: 0 50px;
   box-sizing: border-box;
-
   min-width: 320px;
 }
 
@@ -216,7 +215,7 @@ button {
 }
 
 .hebergements-and-populaires section {
-
+  background-color: var(--main-bg-color);
   border-radius: 20px;
   padding: 30px;
   box-sizing: border-box;
@@ -230,7 +229,6 @@ button {
 .hebergements-cards {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  /* valeur égale à ": 1fr 1fr 1fr"; */
   gap: 10px;
 }
 
@@ -427,19 +425,9 @@ footer div ul li:last-of-type {
     /* change navigation section position to the next line, on bottom */
   }
 
-  /* 
-     * centrer image / logo:
-     *
-     * d'abord, avec la propriété "padding"  on donne une marge intérieur au logo
-     * on utilise les "rem" (unité à valeurs relatives) pr rester centrer,  
-     * quelque soit la largeur du device (de 767 à 320px) 
-     * enfin, on pt combler l'espace restant avec la valeur 
-     * "auto" sur des marges extérieurs, 
-     * 
-     */
+
   .header-top img {
     padding: 30px 2rem;
-    /* "2rem" soit 2 * la taille police de l' élément racine ("html")*/
     margin-left: auto;
     margin-right: auto;
   }
@@ -473,7 +461,6 @@ footer div ul li:last-of-type {
 
   .header-bottom {
     margin: 0 6% 35px 6%;
-    /* 18.48 */
   }
 
   .header-bottom p {
@@ -483,8 +470,6 @@ footer div ul li:last-of-type {
 
   /*********** search-form-group recherche - filtre - info ************/
   .recherche form {
-    /* justify-content: center; 
-    margin-left: 5%;*/
     margin-left: 20px;
     margin-right: 20px;
   }
@@ -507,20 +492,6 @@ footer div ul li:last-of-type {
     color: rgb(255, 255, 255);
   }
 
-  /*.filtre {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-  }
-  .filtre p {
-    grid-row: 1 / 2;
-    grid-column: 1 / 5;   
-  }
-  .filtre button {
-    grid-row: 2 / 4;
-    grid-column: ;  
-  } */
-
   .filtre {
     display: flex;
     flex-wrap: wrap;
@@ -538,32 +509,16 @@ footer div ul li:last-of-type {
     margin-left: 0;
   }
 
-  /* .filtre button {
-  border-radius: 25px;
-  
-  background-color: white;
-  font-size: 17px;
-  font-weight: bold;
-  border: 1px solid #D9D9D9;
-  padding: 0;
-} */
   /* 
-   * la maquette indique que les 2 prochaines sections sont inversés en mobile, 
-   * la section "populaires" apparait en 1ere, avant la section "hébergements" 
+   * 2 prochaines sections sont inversés en mobile, 
    */
-
   /****  mobile -- section-hebergements&populaires   ****/
   .hebergements-and-populaires {
     flex-direction: column-reverse;
     /* 
-     * la valeur "column-reverse* de la propriété "flex-direction" ns permet 
-     * d'inverser l'ordre de positionnement des éléments enfants, soit nos 2 colonnes, 
+     * valeur "column-reverse* pr inverser l'ordre de positionnement des éléments enfants, soit nos 2 colonnes, 
      * la section "populaires" qui était positionné en seconde apparaît désormais en première 
     */
-  }
-
-  .hebergements-and-populaires section {
-    /*  */
   }
 
   /**********************************
@@ -579,12 +534,6 @@ footer div ul li:last-of-type {
 
   }
 
-  .hebergements-cards .card {}
-
-  .hebergements-cards img {
-    /*     */
-  }
-
   /*******  mobile_section-populaires  *********/
   .populaires {
     background-color: var(--main-bg-color);
@@ -595,15 +544,6 @@ footer div ul li:last-of-type {
 
   }
 
-  .populaires-cards img {
-    /*     width: 66%;
-    height: 136px;
-    border-top-left-radius: 20px;
-    border-bottom-left-radius: 20px; */
-  }
-
-  .populaires-cards .card {}
-
   /******* mobile-activités *******/
   .activites-cards {
     /* affichage en colonne à la place d'un en grille en mode desktop */
@@ -611,22 +551,9 @@ footer div ul li:last-of-type {
     flex-direction: column;
   }
 
-  #activites {
-    /* margin-top: 50px;
-    padding: 15px; */
-  }
-
-  #activites div p {
-    /* font-weight: 700;
-    padding-left: 10px; */
-  }
 
   .activites-cards .card {
     height: 200px;
-    /* display: flex;
-    flex-direction: column;
-    
-    padding: 0%; */
   }
 
   .activites-cards img {
