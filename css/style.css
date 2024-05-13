@@ -445,11 +445,13 @@ footer div ul li:last-of-type {
   }
 
   .header-nav ul li a {
-    /* make links as wide as their list item parents (<li>) */
+    /* make <a> as wide as <li> (<a> is in block & <li> is inline by default) */
     display: inline-block;
     padding-bottom: 1rem;
     width: 46vw;
     border: 2px transparent solid;
+    /* to fix <a> position on hover, we can remove border-top value to 0 */
+    border-top: 0;
   }
 
   .header-nav ul li a:hover {
