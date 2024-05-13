@@ -155,6 +155,10 @@ button {
   font-weight: 700;
 }
 
+.filtre-buttons {
+  display: flex;
+}
+
 .filtre button {
   border-radius: 25px;
   margin-left: 15px;
@@ -372,6 +376,22 @@ footer div ul li:last-of-type {
 /****** Media queries ***********/
 /* Medium devices (tablets, less/equal than 1024px) */
 @media (max-width: 1024px) {
+
+  /* section filtre */
+  .filtre {
+    flex-direction: column;
+
+  }
+
+  .filtre-buttons {
+    gap: 15px;
+  }
+
+  .filtre button {
+    margin-left: 0;
+  }
+
+  /* hebergements */
   .hebergements-and-populaires {
     flex-direction: column;
   }
@@ -506,12 +526,7 @@ footer div ul li:last-of-type {
   .filtre .filtre-buttons {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-  }
-
-  .filtre button {
-    display: flex;
-    padding: 3% 6%;
-    margin-left: 0;
+    gap: 10px;
   }
 
   /* 
