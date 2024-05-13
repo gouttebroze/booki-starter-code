@@ -161,21 +161,18 @@ button {
   background-color: white;
   font-size: 17px;
   font-weight: bold;
-  border: 1px solid #D9D9D9;
-  padding: 0;
+  border: 2px solid #D9D9D9;
+  padding: 15px 19px;
 }
 
 .filtre button:hover {
   background-color: var(--filter-bg-color);
 }
 
-.filtre button i {
-  padding-left: 19px;
-  padding-right: 14px;
-}
+.filtre button i {}
 
 .filtre button span {
-  padding-right: 19px;
+  padding-left: 10px;
 }
 
 /****** info ******/
@@ -478,7 +475,6 @@ footer div ul li:last-of-type {
 
   .recherche form .btn-text {
     display: none;
-
   }
 
   .recherche form .btn-glass-icon {
@@ -499,15 +495,22 @@ footer div ul li:last-of-type {
     flex-wrap: wrap;
     gap: 10px 5px;
     padding: 0 6% 0 6%;
+    /*     min-width: auto;
+ */
   }
 
   .filtre p {
-    flex-basis: 100%;
+    width: 100%;
+  }
+
+  .filtre .filtre-buttons {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .filtre button {
+    display: flex;
     padding: 3% 6%;
-    flex-basis: 40%;
     margin-left: 0;
   }
 
