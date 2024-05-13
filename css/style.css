@@ -380,7 +380,6 @@ footer div ul li:last-of-type {
   /* section filtre */
   .filtre {
     flex-direction: column;
-
   }
 
   .filtre-buttons {
@@ -389,6 +388,10 @@ footer div ul li:last-of-type {
 
   .filtre button {
     margin-left: 0;
+  }
+
+  .filtre button span {
+    font-size: 16px;
   }
 
   /* hebergements */
@@ -400,6 +403,7 @@ footer div ul li:last-of-type {
     width: 100%;
   }
 
+  /* section: populaires (tablette) */
   .populaires {
     width: 100%;
     margin-top: 50px;
@@ -479,7 +483,7 @@ footer div ul li:last-of-type {
   }
 
   .header-bottom {
-    margin: 0 6% 35px 6%;
+    margin: 0 1.3rem 35px 1.3rem;
   }
 
   .header-bottom p {
@@ -487,10 +491,15 @@ footer div ul li:last-of-type {
     margin: 0;
   }
 
+  main {
+    /* put a margin right & left to all main into mobile device */
+    margin-left: 1.3rem;
+    margin-right: 1.3rem;
+  }
+
   /*********** search-form-group recherche - filtre - info ************/
-  .recherche form {
-    margin-left: 20px;
-    margin-right: 20px;
+  .recherche form input {
+    width: 100%;
   }
 
   .recherche form .btn-text {
@@ -503,7 +512,7 @@ footer div ul li:last-of-type {
     border-top-left-radius: 15px;
     border-bottom-left-radius: 15px;
     padding: 17px;
-    filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.25));
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
   }
 
   .recherche form .btn-glass-icon i {
@@ -511,13 +520,25 @@ footer div ul li:last-of-type {
   }
 
   .filtre {
-    padding: 0 6% 0 6%;
+    padding: 0;
   }
 
   .filtre .filtre-buttons {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
+    gap: 20px 10px;
+  }
+
+  .filtre button {
+    padding-top: 17px;
+    padding-bottom: 17px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .filtre button span {
+    font-size: 14px;
   }
 
   /* 
