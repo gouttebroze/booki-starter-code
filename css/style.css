@@ -511,16 +511,7 @@ footer div ul li:last-of-type {
   }
 
   .filtre {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px 5px;
     padding: 0 6% 0 6%;
-    /*     min-width: auto;
- */
-  }
-
-  .filtre p {
-    width: 100%;
   }
 
   .filtre .filtre-buttons {
