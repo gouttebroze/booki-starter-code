@@ -234,7 +234,7 @@ button {
 }
 
 .hebergements-cards .card {
-  margin-top: 33px;
+  margin-top: 30px;
 }
 
 .hebergements-cards img {
@@ -252,6 +252,25 @@ button {
   margin-bottom: 5px;
 }
 
+.hebergements-footer {
+  /* MEMO, to REMOVE 
+    need to take into account all others elements propreties 
+   * that affect this element part, like: 
+   * ".hebergements-and-populaires" sections : 
+        * 30px padding value  
+          &
+        * a "border-box" value on "box-sizing" property 
+      So need do complete thoses values with 
+        - a padding-top to 30px (space between "cards" & this button)
+        - on padding-bottom, add 2.5px to the "section" 30px, to a padding-bottom 32.5px value 
+  */
+  padding: 30px 0 2.5px 0;
+}
+
+.hebergements-footer h3 {
+  margin: 0;
+}
+
 /****** Populaires ***********/
 .populaires {
   width: 32%;
@@ -265,7 +284,7 @@ button {
 
 .populaires-cards .card {
   display: flex;
-  margin-top: 33px;
+  margin-top: 30px;
 }
 
 .populaires-cards img {
@@ -318,23 +337,21 @@ button {
 }
 
 .activites-cards .card {
-  display: flex;
-  flex-direction: column;
+  /* display: flex;
+  flex-direction: column; */
   width: auto;
-  height: 439px;
-  padding: 0 0 40px 0;
+  padding: 0;
 }
 
 .activites-cards img {
   width: 100%;
-  /* height: 380px; */
-  height: 100%;
+  height: 380px;
   border-radius: 20px 20px 0 0;
 }
 
 .activites-cards h4 {
   margin: 0 19px;
-  /* padding: 20px 19px; */
+  padding: 20px 0;
 }
 
 /****** footer ******/
@@ -373,12 +390,6 @@ footer div ul {
 footer div ul li {
   padding-top: 20px;
 }
-
-footer div ul li:last-of-type {
-  /* add a padding bottom property only to the last <li> */
-
-}
-
 
 /* Le code ci-dessous correspond à la version responsive uniquement */
 
@@ -445,8 +456,11 @@ footer div ul li:last-of-type {
   }
 
   /*** "activites" - tablette ***/
+  .activites-cards {}
+
   .activites-cards .card {
-    height: 270px;
+    /* height: 270px; */
+    min-height: 293px;
   }
 
   .activites-cards .card .title {}
@@ -456,11 +470,15 @@ footer div ul li:last-of-type {
     min-height: 100%;
   }
 
+  /*   .activites-cards h4 {
+    margin: 0 19px;
+    padding: 20px 0;
+  } */
   .activites-cards h4 {
     /* probleme du retour a la ligne sur les 2 dernieres cartes */
     /* max-height: 70px; */
-    /* padding: 25.5px 19px; */
-    padding-top: 19px;
+    padding: 25.5px 0;
+    overflow: auto;
   }
 }
 
