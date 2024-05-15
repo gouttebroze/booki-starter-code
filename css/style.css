@@ -527,8 +527,6 @@ footer div ul li:last-of-type {
     margin: 0;
   }
 
-  main {}
-
   /*********** search-form-group recherche - filtre - info ************/
   .info-group {
     /* put a margin right & left to all main into mobile device */
@@ -586,7 +584,6 @@ footer div ul li:last-of-type {
    */
   /****  mobile -- section-hebergements&populaires   ****/
   .hebergements-and-populaires {
-
     flex-direction: column-reverse;
     /* 
      * valeur "column-reverse* pr inverser l'ordre de positionnement des éléments enfants, soit nos 2 colonnes, 
@@ -619,11 +616,6 @@ footer div ul li:last-of-type {
   /*******  mobile_section-populaires  *********/
   .populaires {
     background-color: var(--main-bg-color);
-  }
-
-  .populaires-cards a {
-
-    /*  width: 0; */
   }
 
   .populaires-cards {
@@ -663,7 +655,6 @@ footer div ul li:last-of-type {
   }
 
   footer div {
-
     padding: 20px 0 30px 30px;
   }
 
