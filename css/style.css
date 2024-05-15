@@ -300,12 +300,14 @@ button {
 /******* activités ******/
 #activites {
   margin-top: 50px;
-  padding: 15px;
+  padding: 30px;
 }
 
-#activites div p {
+#activites div h2 {
   font-weight: 700;
-  padding-left: 10px;
+  font-size: 22px;
+  padding: 30px 0;
+  margin: 0;
 }
 
 .activites-cards {
@@ -318,16 +320,21 @@ button {
 .activites-cards .card {
   display: flex;
   flex-direction: column;
+  width: auto;
   height: 439px;
-  padding: 0%;
-  /* redefinition de la valeur de la propriété "padding" définie sur la classe "card" */
+  padding: 0 0 40px 0;
 }
 
 .activites-cards img {
-  display: flex;
   width: 100%;
-  height: 380px;
+  /* height: 380px; */
+  height: 100%;
   border-radius: 20px 20px 0 0;
+}
+
+.activites-cards h4 {
+  margin: 0 19px;
+  /* padding: 20px 19px; */
 }
 
 /****** footer ******/
@@ -343,6 +350,7 @@ footer div {
   display: flex;
   flex-direction: column;
   padding-left: 20px;
+  padding-bottom: 20px;
 }
 
 footer div h3 {
@@ -359,6 +367,7 @@ footer div ul {
   padding-left: 0;
   margin-top: 0;
   margin-bottom: 0;
+
 }
 
 footer div ul li {
@@ -367,7 +376,7 @@ footer div ul li {
 
 footer div ul li:last-of-type {
   /* add a padding bottom property only to the last <li> */
-  padding-bottom: 20px;
+
 }
 
 
@@ -377,7 +386,7 @@ footer div ul li:last-of-type {
 /* Medium devices (tablets, less/equal than 1024px) */
 @media (max-width: 1024px) {
 
-  /* section filtre */
+  /* filtre */
   .filtre {
     flex-direction: column;
   }
@@ -394,7 +403,7 @@ footer div ul li:last-of-type {
     font-size: 16px;
   }
 
-  /* hebergements */
+  /**** hebergements - tablette (1024) ****/
   .hebergements-and-populaires {
     flex-direction: column;
   }
@@ -403,28 +412,55 @@ footer div ul li:last-of-type {
     width: 100%;
   }
 
-  /* section: populaires (tablette) */
+  /**** populaires (tablette) ****/
   .populaires {
     width: 100%;
     margin-top: 50px;
   }
 
   .populaires-cards {
-    display: flex;
+    /* display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-between; */
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
   }
 
   .populaires-cards a {
-    width: 30%;
+    width: 100%;
+  }
+
+  .populaires-cards img {
+    min-width: 91.5px;
   }
 
   .populaires-cards .card-title {
-    font-size: 14px;
+    font-size: 16px;
   }
 
   .populaires-cards .card-subtitle {
-    font-size: 13px;
+    font-size: 14px;
+  }
+
+  /*** "activites" - tablette ***/
+  .activites-cards .card {
+    height: 270px;
+  }
+
+  .activites-cards .card .title {}
+
+  .activites-cards img {
+    height: 200px;
+    min-height: 100%;
+  }
+
+  .activites-cards h4 {
+    /* probleme du retour a la ligne sur les 2 dernieres cartes */
+    /* max-height: 70px; */
+    /* padding: 25.5px 19px; */
+    padding-top: 19px;
   }
 }
 
@@ -491,15 +527,19 @@ footer div ul li:last-of-type {
     margin: 0;
   }
 
-  main {
+  main {}
+
+  /*********** search-form-group recherche - filtre - info ************/
+  .info-group {
     /* put a margin right & left to all main into mobile device */
     margin-left: 1.3rem;
     margin-right: 1.3rem;
   }
 
-  /*********** search-form-group recherche - filtre - info ************/
   .recherche form input {
     width: 100%;
+    /* TODO : mettre 1 max-width pr reduire qd device trop large et input 
+    qui s'étalle sut tte la largeur  */
   }
 
   .recherche form .btn-text {
@@ -546,11 +586,17 @@ footer div ul li:last-of-type {
    */
   /****  mobile -- section-hebergements&populaires   ****/
   .hebergements-and-populaires {
+
     flex-direction: column-reverse;
     /* 
      * valeur "column-reverse* pr inverser l'ordre de positionnement des éléments enfants, soit nos 2 colonnes, 
      * la section "populaires" qui était positionné en seconde apparaît désormais en première 
     */
+  }
+
+  .hebergements-and-populaires section {
+    border-radius: 0;
+    padding: 30px 20px;
   }
 
   /**********************************
@@ -566,14 +612,27 @@ footer div ul li:last-of-type {
 
   }
 
+  .hebergements-cards .card {
+    margin-top: 15px;
+  }
+
   /*******  mobile_section-populaires  *********/
   .populaires {
     background-color: var(--main-bg-color);
   }
 
-  .populaires-cards {
-    flex-direction: column;
+  .populaires-cards a {
 
+    /*  width: 0; */
+  }
+
+  .populaires-cards {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .populaires-cards .card {
+    margin-top: 15px;
   }
 
   /******* mobile-activités *******/
@@ -589,8 +648,9 @@ footer div ul li:last-of-type {
   }
 
   .activites-cards img {
-    width: 100%;
-    height: 141px;
+    min-width: 315px;
+    min-height: 141px;
+
   }
 
   /*************************
@@ -599,6 +659,16 @@ footer div ul li:last-of-type {
   footer {
     display: flex;
     flex-direction: column;
+    padding-top: 10px;
+  }
+
+  footer div {
+
+    padding: 20px 0 30px 30px;
+  }
+
+  footer div ul li {
+    padding-top: 15px;
   }
 
 }
