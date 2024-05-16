@@ -230,11 +230,15 @@ button {
 .hebergements-cards {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 10px;
+  gap: 30px;
 }
 
 .hebergements-cards .card {
-  margin-top: 30px;
+  margin-top: 0;
+}
+
+.hebergements-title {
+  padding-bottom: 30px;
 }
 
 .hebergements-cards img {
@@ -456,8 +460,6 @@ footer div ul li {
   }
 
   /*** "activites" - tablette ***/
-  .activites-cards {}
-
   .activites-cards .card {
     /* height: 270px; */
     min-height: 293px;
@@ -567,7 +569,7 @@ footer div ul li {
     display: block;
     border-top-left-radius: 15px;
     border-bottom-left-radius: 15px;
-    padding: 17px;
+    padding: 17px 19.5px;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
   }
 
