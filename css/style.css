@@ -153,6 +153,7 @@ button {
 
 .filtre p {
   font-weight: 700;
+  font-size: 18px;
 }
 
 .filtre-buttons {
@@ -636,6 +637,7 @@ footer div ul li {
   /*******  mobile_section-populaires  *********/
   .populaires {
     background-color: var(--main-bg-color);
+    margin-top: 0;
   }
 
   .populaires-cards {
