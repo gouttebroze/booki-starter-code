@@ -77,11 +77,6 @@ button {
   width: 61px;
   margin-right: auto;
   padding: 30px 0;
-  /* propriété "margin-right" (ou left) ayant valeur "auto" sur flexbox 
-  permet de fixer 1 element, ici à gauche, pr le séparer des autres elements 
-  (il n'existe pas de propriétés similaires sur l'axe horizontal à celle de l'axe verticale tel 
-  que "align-self" permettant de séparer et manipuler un élément 
-  unique au groupe... */
 }
 
 .header-nav ul {
@@ -654,6 +649,7 @@ footer div ul li {
   .populaires-cards {
     display: flex;
     flex-direction: column;
+    gap: 0;
   }
 
   .populaires-cards .card {
